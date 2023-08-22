@@ -12,7 +12,7 @@ events and holidays.
    
 2. Access your project folder
    ``` bash
-   cd your-django-app
+   cd employee-app
 
 3. Install dependencies using pipenv
     ```bash
