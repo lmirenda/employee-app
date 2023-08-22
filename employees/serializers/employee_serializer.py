@@ -7,13 +7,15 @@ from employees.models.employee import Employee
 
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = '__all__'
+        fields = "__all__"
         model = Employee
 
     @staticmethod
     def validate_name(value):
         if len(value) < 2:
-            raise serializers.ValidationError("The name is must be at least 2 characters long.")
+            raise serializers.ValidationError(
+                "The name is must be at least 2 characters long."
+            )
         return value
 
     @staticmethod
