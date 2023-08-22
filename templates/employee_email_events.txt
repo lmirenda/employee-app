@@ -1,0 +1,19 @@
+
+Here are the events for tomorrow:
+
+{% if anniversaries %}
+Upcoming Anniversaries:
+{% for anniversary in anniversaries %}
+- {{ anniversary.name }}'s {{anniversary.amount}} year anniversary!
+{% endfor %}
+{% endif %}
+
+{% if birthdays %}
+Upcoming Birthdays:
+{% for birthday in birthdays %}
+- {{ birthday.name }}'s {{birthday.amount}}th birthday!
+{% endfor %}
+{% endif %}
+
+Best regards,
+Your Company
