@@ -8,7 +8,7 @@ events and holidays.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-django-app.git
+   git clone https://github.com/lmirenda/employee-app/
    
 2. Access your project folder
    ``` bash
