@@ -1,3 +1,5 @@
+import os
+
 import requests
 from django.utils import timezone
 from datetime import timedelta
@@ -9,7 +11,7 @@ from rest_framework.response import Response
 @api_view()
 def check_holidays_view(request):
     today = timezone.now().date()
-    api_key = "1d591a6b7bd840e89ab2e862ad770933"
+    api_key = os.environ.get("ABSTRACT_API_KEY")
     country_code = "US"
     base_url = "https://holidays.abstractapi.com/v1/"
 
@@ -27,7 +29,6 @@ def check_holidays_view(request):
         response = requests.get(url=base_url, params=params)
 
         holidays_data = response.json()
-        holidays_in_range.append(i)
 
         if holidays_data != [] and response.status_code == 200:
             for holiday in holidays_data:
