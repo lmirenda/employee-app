@@ -38,6 +38,7 @@ class EmployeeManager(models.Manager):
                         f"{field_name}__month__lt": end_date_obj.month,
                     }
                 )
+
             )
 
         return date_range_filter
@@ -51,6 +52,7 @@ class EmployeeManager(models.Manager):
         return self.get_queryset().filter(
             self.filter_by_date_range("enrollment_date", start_date, days)
         )
+
 
 
 class Employee(models.Model):
